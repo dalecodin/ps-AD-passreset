@@ -83,16 +83,23 @@ function New-RandomPassword {
 }
 
 if ($NewPass) {
+    $password = New-RandomPassword
+    $secure   = ConvertTo-SecureString $password -AsPlainText -Force
+
     Set-ADAccountPassword -Identity $user -NewPassword (ConvertTo-SecureString $password -AsPlainText -Force) -Reset
 
-    $filename = $user + "password.txt"
-    $PassPath = "C:\Users\HelpDeskAdmin\Documents\passwords\$filename"
+    $filename = "$user-password.txt"
+    $PassPath = Join-Path "C:\Users\John Doe\Documents\passwords" $filename
+
 
     Set-Content -Path $PassPath -Value $password
 
     Write-Output "Password changed to $password and is stored at $PassPath"
 
     Set-ADUser -Identity $user -ChangePasswordAtLogon $true
-else: 
-    Write-Output "Error"
                 }
+else {
+    Write-Output "Error"
+     }
+
+Set-ADUser -Identity $user -ChangePasswordAtLogon $true
