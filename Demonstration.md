@@ -50,6 +50,7 @@ On your admin machine, run the script from this repo:
 ```powershell
 .\Reset-AdPassword.ps1
 ```
+or open in your IDE
 ![20251030-1435-11 5353189-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/1987b38b-0756-4fb2-ac26-83cca90ab22b)
 
 
