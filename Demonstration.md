@@ -50,6 +50,9 @@ On your admin machine, run the script from this repo:
 ```powershell
 .\Reset-AdPassword.ps1
 ```
+![20251030-1435-11 5353189-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/1987b38b-0756-4fb2-ac26-83cca90ab22b)
+
+
 ![Admin Script Run](media/your-gif2.gif)
 
 ##  Step 8 – Verify Login Works
